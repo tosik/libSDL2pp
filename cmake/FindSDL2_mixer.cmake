@@ -6,6 +6,11 @@
 #  SDL2_MIXER_FOUND
 #
 
+if (MSYS)
+  set(CMAKE_INCLUDE_PATH "/usr/local/x86_64-w64-mingw32/include")
+  set(CMAKE_LIBRARY_PATH "/usr/local/x86_64-w64-mingw32/lib")
+endif()
+
 FIND_PATH(SDL2_MIXER_INCLUDE_DIR NAMES SDL_mixer.h PATH_SUFFIXES SDL2)
 
 FIND_LIBRARY(SDL2_MIXER_LIBRARY NAMES SDL2_mixer)
