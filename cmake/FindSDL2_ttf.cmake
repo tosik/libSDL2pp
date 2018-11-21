@@ -6,6 +6,11 @@
 #  SDL2_TTF_FOUND
 #
 
+if (MSYS)
+  set(CMAKE_INCLUDE_PATH "/usr/local/cross-tools/x86_64-w64-mingw32/include")
+  set(CMAKE_LIBRARY_PATH "/usr/local/cross-tools/x86_64-w64-mingw32/lib")
+endif()
+
 FIND_PATH(SDL2_TTF_INCLUDE_DIR NAMES SDL_ttf.h PATH_SUFFIXES SDL2)
 
 FIND_LIBRARY(SDL2_TTF_LIBRARY NAMES SDL2_ttf)
